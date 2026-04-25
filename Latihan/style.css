@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center; /*Center secara garis x*/
+    align-items: center; /*Center secara garis y*/
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    padding: 10px;
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px; /*Memberi jarak batas atas/bawah padding(x, y)*/
+    border-radius: 10px; /*Lengkungan border*/
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}

@@ -1,0 +1,98 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    }
+
+body{
+    background-image: url('./image/1400251.png');
+    background-size: cover;    /* Memaksa gambar untuk menutup seluruh layar */
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    height: 100vh;
+}
+
+a{
+    color: white;
+}
+
+.navbar{
+    display: flex; /* Membuat elemen childnya sejajar/horizontal */
+    align-items: center;
+    justify-content: space-between; /* Memberi jarak antar elemen*/
+    padding: 20px 20px; /* Top, Right */
+}
+
+.navbar .logo{
+    font-size: 20px;
+    margin-left: 20px; /* margin kiri class logo */
+}
+
+.navbar .menu{
+    font-size: 20px;
+    display: flex;
+    gap: 70px;
+}
+
+.navbar .menu a:hover{
+    color: white;
+}
+
+/*  */
+.navbar .login-btn{ /* Harus diperjelas parent class btn-login siapa? */
+    background-color: white;
+    color: black;
+    padding: 10px 30px ; /* jarak dalam elemen */
+    display: inline-block; /* Kalau memakai <a> wajib pakai inline block */
+    border-radius: 20px; /* membuat rounded sudut */    
+    font-size: 15px;
+}
+
+.navbar .regis-btn{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.home{
+    display: flex;
+    justify-content: center; /* horizontal tengah */
+    align-items: center; /* vertikal tengah */ 
+    margin-top: 110px;
+    margin-bottom: 130px;
+    color: white;
+    gap: 80px; /* Memberi jarak antar content */
+}
+
+.home .content{
+    background-color: rgba(0, 0, 0, 0.4); /* membuat background yang transparant sedikit */
+    border-radius: 40px;
+    padding: 20px;
+    width: 30%;
+}
+
+.home .content h1{
+    font-size: 50px;
+}
+
+.home .image-wajah img{
+    width: 400px;
+
+}
+
+footer{
+    color: white;
+    margin-top: auto;
+}
+
+.home .content .readmore{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+

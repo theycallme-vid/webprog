@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐷Warung Babi</title>
+    <style>
+        body{ /* Styling pada body */
+            background-color: pink;
+        }
+        a{
+            text-decoration: none; /* menghilang underline pada <a> */
+            color: black; /* Mengubah text color pada <a> */
+        }
+
+        .search-bar{
+            margin: 20px 0;
+        }
+
+        .header{
+            display: flex;
+        }
+    </style>
+</head>
+<!--  -->
+<body>
+    <header>
+        <nav>  <!--Gunanya untuk membungkus kumpulan link website-->
+            <h2 class="logo"><a href="#">🐷Warung Babi</a></h2>
+            <ul> <!-- ul: tidak urut(bullet); ol:urut(1,2,3) -->
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#" class="btn-signin">Sign In</a>
+            <a href="#" class="btn-signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- BAGIAN MAIN WEBSITE-->
+    <div class="main"> 
+        <div class="search-bar" align="center">
+            <table>
+                <tr>
+                    <td><label for="search">Search</label></td>
+                    <td><input type="text" placeholder="input your favorite food" id="search"></td>
+                    <td><input type="submit" value="send"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="ucapan" style="background-color: white;" align="center">
+            <h2 style="margin: 0;">Selamat Datang di Warung Babi 🐷</h2>
+            <p style="margin: 0;">Makanan enak, harga bersahabat</p>
+        </div>
+        <div class="flashsale" style="margin: 20px;">
+            <table >
+                <tr>
+                    <td align="center">
+                        <img src="https://cahayameat.com/wp-content/uploads/2022/09/resep-sate-babi.jpeg" width="50%"><br>
+                        <b>Sate Babi Babi</b> <br>
+                        <p>Rp 50.000,-/pcs</p>
+                    </td>
+                    </td>
+                    <td align="center">
+                        <img src="https://cahayameat.com/wp-content/uploads/2022/09/resep-sate-babi.jpeg" width="50%"><br>
+                        <b>Sate Babi Babi</b> <br>
+                        <p>Rp 50.000,-/pcs</p>
+                    </td>
+                    <td align="center">
+                        <img src="https://cahayameat.com/wp-content/uploads/2022/09/resep-sate-babi.jpeg" width="50%"><br>
+                        <b>Sate Babi Babi</b> <br>
+                        <p>Rp 50.000,-/pcs</p>
+                    </td>
+                    <td align="center">
+                        <img src="https://cahayameat.com/wp-content/uploads/2022/09/resep-sate-babi.jpeg" width="50%"><br>
+                        <b>Sate Babi Babi</b> <br>
+                        <p>Rp 50.000,-/pcs</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="https://cahayameat.com/wp-content/uploads/2022/09/resep-sate-babi.jpeg" width="50%"><br>
+                        <b>Sate Babi Babi</b> <br>
+                        <p>Rp 50.000,-/pcs</p>
+                    </td>
+                    </td>
+                    <td align="center">
+                        <img src="https://cahayameat.com/wp-content/uploads/2022/09/resep-sate-babi.jpeg" width="50%"><br>
+                        <b>Sate Babi Babi</b> <br>
+                        <p>Rp 50.000,-/pcs</p>
+                    </td>
+                    <td align="center">
+                        <img src="https://cahayameat.com/wp-content/uploads/2022/09/resep-sate-babi.jpeg" width="50%"><br>
+                        <b>Sate Babi Babi</b> <br>
+                        <p>Rp 50.000,-/pcs</p>
+                    </td>
+                    <td align="center">
+                        <img src="https://cahayameat.com/wp-content/uploads/2022/09/resep-sate-babi.jpeg" width="50%"><br>
+                        <b>Sate Babi Babi</b> <br>
+                        <p>Rp 50.000,-/pcs</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- BAGIAN FOOTER WEBSITE-->
+    <div class="footer" style="grid-template-columns: 50% 50%; display:grid;"> <!-- align-items: align Y  justify-items: align X-->
+        <div class="signin">
+            <h2>Sign in</h2>
+            <form action="hasil1.php" method="POST"> <!--GET: data terlihat di url; POST: kebalikannya-->
+                <table>
+                    <tr> <!-- USERNAME  -->
+                        <td><label for="user">Username</label></td> 
+                        <td> : </td>
+                        <td><input type="text" placeholder="input your username" id="user" ></td>
+                    </tr>
+                    <tr> <!-- PASSWORD -->
+                        <td><label for="pass">Password</label></td>
+                        <td> : </td>
+                        <td><input type="password" placeholder="input your password" id="pass" ></td>
+                    </tr>
+                    <tr> <!-- BUTTON SIGN IN-->
+                        <td colspan="3"><input type="submit" value="Sign In"></td> 
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="signup"> 
+            <h2>Sign Up</h2>
+            <form action="hasil2.php">
+                <table class="tabel-signup">
+                    <tr> <!-- FULLNAME -->
+                        <td><label for="fullname">Fullname</label></td>
+                        <td> : </td>
+                        <td><input type="text" id="fullname" placeholder="input your fullname"></td>
+                    </tr>
+                    <tr> <!-- GENDER -->
+                        <td><label for="gender">Gender</label></td>
+                        <td> : </td>
+                        <td>
+                            <input type="radio" name="jk" value="Male">Male 
+                            <input type="radio" name="jk" value="Female">Female
+                        </td>
+                    </tr>
+                    <tr> <!-- BIRTH -->
+                        <td><label for="birth">Date of Birth</label></td>
+                        <td> : </td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr> <!-- CITY -->
+                        <td><label for="city">City</label></td>
+                        <td> : </td>
+                        <td>
+                            <select name="kota" id="kota">  <!-- name: dikirim ke server; id: utk style css -->
+                                <option value="1">Surabaya</option>
+                                <option value="2">Jakarta</option>
+                                <option value="3">Bandung</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr> <!-- USERNAME  -->
+                        <td><label for="user">Username</label></td> 
+                        <td> : </td>
+                        <td><input type="text" placeholder="input your username" id="user" ></td>
+                    </tr>
+                    <tr> <!-- PASSWORD -->
+                        <td><label for="pass">Password</label></td>
+                        <td> : </td>
+                        <td><input type="password" placeholder="input your password" id="pass" ></td>
+                    </tr>
+                    <tr> <!-- BUTTON SIGN UP-->
+                        <td colspan="3"><input type="submit" value="Sign Up"></td> 
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!-- 
+1.	<h1,h2,h3> : Heading
+2.	<a> : anchor/link  <a href=”..html”>
+3.	<b> / <strong>:  buat bold
+4.	<i> : buat italic
+5.	<br> : buat line baru
+6.	<button> : buat button  <button type=”button”>click me</button>
+7.	<div> : sebuah wadah utk klmpk in elemen
+8.	<table> : buat table  
+a.	<tr> : buat row
+b.	<td> : buat coumn
+c.	<th> : text bold
+d.	Colspan : menggabungkan kolom ke samping/horizontal
+e.	Rowspan : menggabungkan kolom ke bawas/atas/vertikal
+9.	<hr> : buat garis horizontal
+10.	<img> : upload img  <img src=”..jpg” width=”100px” height=”100px”>
+11.	<input> : type (button, checkbox, color, date, email, file, image, number, password, radio, search, submit, time, url, text)
+-->
+

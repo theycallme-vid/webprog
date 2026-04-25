@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date App</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background-color: pink; */
+            background: url(./image/pink1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container{
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 25px;
+            padding: 35px;
+        }
+
+        .container .text{
+            padding-bottom: 30px;
+            color: rgb(253, 99, 124);
+        }
+
+        .container .button{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            
+        }
+
+        .container .button input{
+            width: 120px;
+            height: 100px;
+            text-align: center;
+            background-color: #e91e63;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+
+        .button .no:hover{
+            transform: translate(200px, -150px);
+        }
+
+        .button .yes:hover{
+            background-color: white;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gambar">
+
+        </div>
+        <div class="text">
+            <h2>Mau kah kamu ngedate denganku?</h2>
+        </div>
+        <div class="button">
+            <input class="yes" type="submit" value="YES">
+            <input class="no" type="submit" value="NO">
+        </div>
+    </div>
+</body>
+</html>
