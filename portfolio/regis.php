@@ -36,7 +36,7 @@
             $('.container').slideDown(1000);
 
         })
-    </script>
+     </script>
 
     <script>
         function togglePass(){

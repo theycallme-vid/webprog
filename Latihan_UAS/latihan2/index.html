@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran UBAYA</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .navbar{
+            display: flex;
+            padding: 10px 10px;
+        }
+
+        .navbar .logo img{
+            width: 300px;
+            align-items: center;
+        }
+
+        .navbar .judul{
+            /* padding: 8px; */
+            /* position: absolute; */
+            /* justify-content: center;
+            align-items: center; */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .navbar .login{
+            margin-left: auto;
+            font-size: 14px;
+        }
+
+        .navbar .login form{
+            padding: 5px;
+        }
+
+        .container{
+            justify-content: center;
+            align-items: center;
+
+            display: flex;
+            flex-direction: column;
+            width: 420px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            padding: 20px 10px;
+            max-width: 90%; 
+            min-height: 40vh;
+            border-radius: 30px; 
+            margin: auto;  
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../../2B/ubaya.png">
+        </div>
+        <div class="judul">
+            <h1>FORMULIR PENDAFTARAN</h1>
+        </div>
+        <div class="login">
+            <form onsubmit="login(event)">
+                <table>
+                    <tr>
+                        <td><label for="username">Username</label></td>
+                        <td><input type="text" placeholder="Username" id="login_user"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password</label></td>
+                        <td><input type="password" placeholder="Password" id="login_pass"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Login"></td>
+                        <td><a href="register.php">Register</a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <form >
+            <table>
+                <tr>
+                    <td><label for="fullname">Nama Lengkap</label></td>
+                    <td><input type="text" placeholder="Nama Lengkap" id="fullname"></td>
+                </tr>
+                <tr>
+                    <td><label for="name">Nama Panggilan</label></td>
+                    <td><input type="text" placeholder="Nama Panggilan" id="name"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Jenis Kelamin
+                    </td>
+                    <td>
+                        <input type="radio"> Laki-Laki <br>
+                        <input type="radio"> Perempuan
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="alamat">Alamat</label></td>
+                    <td><textarea id="alamat"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Kota</td>
+                    <td>
+                        <select id="kota">
+                            <option>Surabaya</option>
+                            <option>Jakarta</option>
+                            <option>Bandung</option>
+                            <option>Tanggerang</option>
+                        </select>
+                    </td>
+                </tr>
+                                <tr>
+                    <td>Provinsi</td>
+                    <td>
+                        <select id="kota">
+                            <option>Jawa Timur</option>
+                            <option>Jawa Tengah</option>
+                            <option>Jawa Barat</option>
+                            <option>DKI Jakarta</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="username" id="user">Username</label></td>
+                    <td><input type="text" placeholder="Username"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Login"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <footer>
+        <p>Copyright 2026 All Right Reserved</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        function login(event) {
+                // Mencegah halaman refresh (WAJIB)
+                event.preventDefault(); 
+                
+                // Ambil nilai dari ID input yang benar (login_user)
+                const username = $("#login_user").val();
+
+                if (username === "") {
+                    alert("Username tidak boleh kosong!");
+                    return;
+                }
+
+                // Simpan data
+                localStorage.setItem("loginStatus", "success");
+                localStorage.setItem("username", username);
+
+                // Pindah halaman
+                console.log("Berhasil login, mengalihkan...");
+                window.location.href = "../../portfolio/main.html";
+            }
+    </script>
+
+</body>
+</html>

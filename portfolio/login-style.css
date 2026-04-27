@@ -43,9 +43,9 @@ nav h1 a{
     width: 420px;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    padding: 20px 10px 20px 10px;
+    padding: 20px 10px;
     max-width: 90%; 
-    height: 40vh;
+    min-height: 40vh;
     border-radius: 30px; 
     margin: auto;   
 }
@@ -61,7 +61,7 @@ nav h1 a{
 
 .container .input-box{
     width: 100%;
-    height: 50px;
+    height: 50px;   
     margin: 30px 0;
 }
  /*  */

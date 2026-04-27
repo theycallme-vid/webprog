@@ -111,7 +111,7 @@
     <br>
     <br>
     <br>
-    <footer>
+    <footer style="margin: auto;">
         <hr>
         <p align="center">Copyright 2026 All Right Reserved</p>
     </footer>
