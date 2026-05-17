@@ -1,0 +1,107 @@
+<?php 
+    
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "db_profile";
+
+    $ambil_nama = "select nama from users whe"
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="main-style.css">
+</head>
+
+<body>
+    <!-- HEADER SAMA -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Portfolio</a></div>
+            <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skill.html">Skill</a>
+                <a href="education.html">Education</a>
+                <a href="contact.html">Contact</a>
+            </div>   
+            <div class="auth">
+                <a href="login.php" class="login-btn">Login</a>
+                <a href="regis.php" class="regis-btn">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="home">
+        <div class="content">
+            <h1>Hi....</h1>
+            <h2>Nama Saya Shinchan</h2>
+            <br><br>
+            <h3>Tentang Saya</h3>
+            <p id="kalimat">Saya adalah mahasiswa Sistem Informasi yang memiliki ketertarikan kuat pada pengembangan sistem berbasis web dan...</p>
+            <br>
+            <div class="btn-readmore">
+                <button id="readmore">Read More</button>
+            </div>
+        </div>
+        <div class="image-wajah">
+            <img src="./image/SHIN.png" id="shinchan" alt="Shinchan">
+        </div>
+    </div>
+    
+    <footer>
+        <p style="text-align: center;">Copyright &copy; 2024 All Rights Reserved</p>
+    </footer>
+
+
+    <script>
+        if (localStorage.getItem("loginStatus") === "success") {
+            const username = localStorage.getItem("username");
+            alert("Login berhasil!, Selamat Datang " + username + "!");
+            localStorage.removeItem("loginStatus");
+        }
+
+  
+        // document.getElementById('shinchan').addEventListener("click", () => {
+        //     alert("Halo! Aku Shinchan");
+        // });
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#readmore').click(function(){
+                const fullText = 'Saya adalah mahasiswa Sistem Informasi yang memiliki ketertarikan kuat pada pengembangan sistem berbasis web dan analisis data untuk mendukung pengambilan keputusan. Selama masa studi, saya aktif mengerjakan berbagai proyek yang berfokus pada integrasi sistem, pengolahan data, serta perancangan solusi digital yang tidak hanya berfungsi secara teknis, tetapi juga relevan dengan kebutuhan pengguna.';
+                const shortText = 'Saya adalah mahasiswa Sistem Informasi yang memiliki ketertarikan kuat pada pengembangan sistem berbasis web dan...';
+                
+                if ($('#readmore').text() === 'Read More') {
+                    $('#kalimat').html(fullText);
+                    $('#readmore').text('Read Less');
+                } else {
+                    $('#kalimat').html(shortText);
+                    $('#readmore').text('Read More');
+                }
+            });
+        });
+
+        $('#shinchan').click(function(){
+            alert("Halo, Aku Shinchan");
+        });
+    
+        // $(document).ready(function(){
+        //     $('#shinchan').hide();
+        //     $('#shinchan').slideDown(3000);
+        // })
+
+        $("#shinchan").fadeIn(2000);
+
+    </script>
+</body>
+</html>
+
